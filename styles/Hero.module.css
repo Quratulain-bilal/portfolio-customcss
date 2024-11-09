@@ -1,0 +1,182 @@
+/* Hero.module.css */
+
+/* Hero Section */
+.section {
+  color: #fbbf24; /* text-yellow-500 */
+  background: linear-gradient(to right, black, #6b21a8, black); /* bg-gradient-to-r */
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem; 
+  
+}
+
+/* Container for the content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Column container for text */
+.flexCol {
+  flex-grow: 1;
+  flex-basis: 50%;
+  padding-right: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 1; /* Ensure the text is always visible */
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Paragraph text */
+.paragraph {
+  margin-bottom: 2rem;
+  line-height: 1.75;
+  color: #d1d5db; /* text-gray-300 */
+  font-weight: normal;
+}
+
+/* Button container */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Button */
+.button {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  background-color: #6b21a8; /* bg-purple-600 */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #7c3aed; /* hover:bg-purple-500 */
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(124, 58, 237, 0.5); /* shadow-purple-800 */
+}
+
+/* Image container */
+.imageContainer {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Image */
+.image {
+  width: 350px;
+  height: 350px;
+  outline: 2px solid #6b21a8; /* outline-purple-700 */
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+}
+
+.image:hover {
+  box-shadow: 0 8px 16px rgba(124, 58, 237, 0.5); /* shadow-purple-900 */
+}
+
+/* For medium screens (tablets and smaller) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flexCol {
+    flex-basis: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .imageContainer {
+    flex-basis: 100%;
+    margin-top: 1rem;
+    justify-content: center; /* Center image on small screens */
+  }
+}
+
+/* For larger screens (desktop) */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .imageContainer {
+    justify-content: flex-end; /* Align image to the right */
+  }
+
+  .image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .flexCol {
+    text-align: left;
+    padding-right: 2rem; /* Add more space on the right side */
+  }
+}
+
+/* For smaller screens (mobile devices) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+}

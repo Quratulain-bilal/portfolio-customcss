@@ -1,0 +1,98 @@
+/* Footer.module.css */
+.footerContainer {
+  background: linear-gradient(to right, #000, #6a0dad); /* Gradient from black to purple */
+  color: white;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerInnerContainer {
+  width: 100%;
+  max-width: 1200px; /* Ensures the footer does not stretch too wide */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* Space between elements */
+  padding: 0 20px;
+}
+
+.footerLogoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerLogo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.footerText {
+  font-size: 0.875rem;
+  color: #d6aad1;
+  margin-top: 1rem;
+}
+
+.footerText a {
+  color: #bfa2d2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerText a:hover {
+  color: #ff4d92;
+}
+
+.socialLinks {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.socialIcon.facebook:hover {
+  filter: hue-rotate(180deg); /* Color shift effect */
+}
+
+.socialIcon.twitter:hover {
+  color: #1da1f2;
+}
+
+.socialIcon.instagram:hover {
+  color: #fa7e1e;
+}
+
+.socialIcon.github:hove
+{
+  color: #6e5494;
+}
+
+.socialIcon.linkedin:hover {
+  color: #0072b1;
+}
+
+.hiddenMdBlock {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hiddenMdBlock {
+    display: block;
+  }
+}

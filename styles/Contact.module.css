@@ -1,0 +1,48 @@
+/* contact.module.css */
+
+.contactContainer {
+  background: linear-gradient(to right, black, purple);
+  height: 100vh;
+}
+
+.contactWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.contactInfo {
+  width: 50%;
+background: linear-gradient(to right, black, #6b21a8, black);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.contactForm {
+  width: 40%;
+  padding: 20px;
+  background: linear-gradient(to right, black, #6b21a8, black);
+  border-radius: 10px;
+  color: white;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submitButton {background: linear-gradient(to right, black, #6b21a8, black);
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: purple;
+}

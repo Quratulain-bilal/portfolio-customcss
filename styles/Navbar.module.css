@@ -1,0 +1,176 @@
+/* Container for the entire navbar */
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  transition: top 0.3s ease; /* Smooth transition for fixed navbar */
+  
+}
+
+/* Header styling */
+.header {
+  background: linear-gradient(to right, black, #6b21a8, black);
+  color: white;
+  box-shadow: none;
+  
+}
+
+/* Container within the header to center content */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: padding 0.3s ease; 
+}
+
+/* Logo container */
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gradient background for the logo */
+.logoBackground {
+  background: linear-gradient(to right, #6a0dad, #8a2be2); 
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease; 
+}
+
+/* Logo text styling */
+.logoText {
+  color: white;
+  font-family: 'serif';
+  font-size: 2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* Title text beside the logo */
+.titleText {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease; 
+}
+
+/* Button for toggling menu on mobile */
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
+}
+
+/* Navbar links styling for larger screens */
+.navLinks {
+  display: none;
+  gap:2px;
+  
+}
+
+
+/* Active state for mobile menu links */
+.navLinksActive {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #6a0dad, #8a2be2);
+  padding: 1rem;
+  z-index: 100; 
+  animation: slideIn 0.3s ease-out; 
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Styling for each nav link */
+.navLink {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease; 
+  cursor: pointer;
+}
+
+/* Hover effects for links */
+.navLink:hover {
+  color: #ddd;
+  transform: scale(1.1); 
+}
+
+/* For larger screens (md and above) */
+@media (min-width: 768px) {
+  .headerContainer {
+    padding: 1rem 4rem; 
+  }
+
+  .navLinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    background: transparent;
+  }
+
+  .toggleButton {
+    display: none; /* Hide toggle button on large screens */
+  }
+
+  .navLink {
+    font-size: 1.1rem; /* Slightly larger font size on large screens */
+    padding: 0.5rem 1.5rem; /* More spacing between links */
+  }
+
+  .logoText {
+    font-size: 2rem; /* Increase logo text size */
+  }
+
+  .titleText {
+    font-size: 1.5rem; /* Larger title text */
+  }
+
+  .logoBackground {
+    width: 3rem;
+    height: 3rem; /* Bigger logo background on larger screens */
+  }
+}
+
+/* For extra large screens (lg and above) */
+@media (min-width: 1024px) {
+  .navLink {
+    font-size: 1.2rem; /* Increase font size on very large screens */
+    padding: 0.5rem 2rem;
+  }
+
+  .headerContainer {
+    padding: 1.5rem 6rem; /* Adjust padding further on very large screens */
+  }
+
+  .logoText {
+    font-size: 2.5rem; /* Increase logo text size */
+  }
+}
