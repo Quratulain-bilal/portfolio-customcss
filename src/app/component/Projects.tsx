@@ -1,104 +1,90 @@
-import Image from "next/image";
 import Link from "next/link";
-import styles from "@/styles/Project.module.css";
+import styles from "../../../styles/Project.module.css";
 
-const projects = [
-  {
-    title: "STATIC RESUME",
-    description:
-      "Build a static, professional resume with an interactive skills toggle. Showcase your expertise and easily highlight your skills with a simple click, ensuring a clean and dynamic presentation.",
+const ProjectSection: React.FC = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "static resume",
+      imgUrl:
+        "https://img.freepik.com/free-photo/resume-apply-work-form-concept_53876-132737.jpg?ga=GA1.1.682219552.1730314102&semt=ais_hybrid",
+      gitUrl: "https://github.com/Quratulain-bilal/static-resume-new.git",
+      previewUrl: "https://new-hakaton-1-five.vercel.app/",
+    },
+    {
+      id: 2,
+      title: "EditAble Resume Builder",
+      imgUrl:
+        "https://img.freepik.com/free-photo/resume-apply-work-form-concept_53876-148017.jpg?ga=GA1.1.682219552.1730314102&semt=ais_hybrid",
+      gitUrl: "https://github.com/Quratulain-bilal/new-hakaton-4e.git",
+      previewUrl: "https://new-hakaton-4e.vercel.app/",
+    },
+    {
+      id: 3,
+      title: "Dynamic Resume Builder",
+      imgUrl:
+        "https://img.freepik.com/free-photo/resumes-desk_144627-43367.jpg?ga=GA1.1.682219552.1730314102&semt=ais_hybrid",
+      gitUrl: "https://github.com/Quratulain-bilal/hakaton-3-dynamic.git",
+      previewUrl: "https://hakaton-3-dynamic.vercel.app/",
+    },
+    {
+      id: 4,
+      title: "Cofee website",
+      imgUrl:
+        "https://img.freepik.com/free-photo/cookies-coffee-crumbling-tabletop_23-2147772152.jpg?ga=GA1.1.682219552.1730314102&semt=ais_hybrid",
+      gitUrl: "/project4",
+      previewUrl: "https://cofee-website-nextjs.vercel.app/",
+    },
+    {
+      id: 5,
+      title: "Calculator",
+      imgUrl:
+        "https://img.freepik.com/premium-photo/items-doing-business-bright-colored-background_200402-13553.jpg?ga=GA1.1.682219552.1730314102&semt=ais_hybrid",
+      gitUrl: "/project5",
+      previewUrl: "https://calculator-next-ruddy.vercel.app/",
+    },
+    {
+      id: 6,
+      title: "Furniture Website",
+      imgUrl:
+        "https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695915.jpg?ga=GA1.1.682219552.1730314102&semt=ais_hybrid",
+      gitUrl: "https://github.com/Quratulain-bilal/Furniture-custom-css.git",
+      previewUrl: "https://furniture-custom-css-zu9r.vercel.app/",
+    },
+  
+  ];
 
-    imageUrl: "/projects/calculator.jpg",
-    link: "https://new-hakaton-1-five.vercel.app/",
-  },
-  {
-    title: "DYNAMIC RESUME BUILDER",
-    description:
-      "Create professional, customizable resumes in minutes with an intuitive, user-friendly interface.Fully responsive resume builder that allows for seamless customization and real-time preview.",
-    imageUrl: "/projects/RESUME.jpg",
-    link: "https://hakaton-3-dynamic.vercel.app/ ",
-  },
-  {
-    title: "COFEE WEBSITE",
-    description:
-      "A beautifully designed coffee website offering a range of premium coffee products, brewing guides, and a seamless online shopping experience.Perfect for coffee enthusiasts looking for quality and convenience in one place.",
-    imageUrl: "/projects/COFEE.jpg",
-    link: "https://cofee-website-nextjs.vercel.app/",
-  },
-  {
-    title: "STUDENT MANAGEMENT SYSTEM",
-    description:
-      "CLI-based student management system for efficient terminal-based management of student records, including adding",
-    imageUrl: "/projects/student.jpg",
-    link: "https://github.com/Quratulain-bilal/student-manangement-sysytem.git ",
-  },
-  {
-    title: "BANK MANAGEMENT SYSTEM",
-    description:
-      "This is a basic CLI-based bank management system program made with TypeScript. You can run it using NPM.",
-    imageUrl: "/projects/bank.jpg",
-    link: "https://github.com/Quratulain-bilal/Oop_My_Bank_Project.git ",
-  },
-  {
-    title: "EDITABLE RESUME",
-    description:
-      "Create and customize your resume effortlessly with this editable resume builder. Modify content, add sections, and update your details on the go.",
-    imageUrl: "/projects/countdown.jpg",
-    link: "https://new-hakaton-edit.vercel.app/",
-  },
-  {
-    title: "NUMBER GUESSING GAME",
-    description:
-      "CLI-based number guessing game that challenges users to guess a randomly generated number within a set number of attempts from the terminal.",
-    imageUrl: "/projects/number.jpg",
-    link: "https://github.com/Quratulain-bilal/CLI-Number-Guessing-Game.git ",
-  },
-
-
-];
-
-export default function Projects() {
   return (
-    <div id="project">
-      <section className={styles.projectSection}>
-        <div className="container px-16 py-48 mx-auto">
-          <div className={styles.projectHeader}>
-            <h1>My Projects</h1>
-            <p>
-              Explore my collection of innovative and impactful projects that
-              showcase my skills in web development, TypeScript, and AI.
-            </p>
-          </div>
-          <div className={styles.projectCardContainer}>
-            {projects.map((project, index) => (
-              <div key={index} className={styles.projectCard}>
-                <div className="relative">
-                  <Image
-                    alt="project"
-                    className={styles.projectCardImage}
-                    src={project.imageUrl}
-                    width={500}
-                    height={300}
-                  />
-                  <div className={styles.projectCardContent}>
-                    <h1 className={styles.projectTitle}>{project.title}</h1>
-                    <p className={styles.projectDescription}>
-                      {project.description}
-                    </p>
-                    <Link
-                      href={project.link}
-                      target="_blank"
-                      className={styles.viewProjectLink}
-                    >
-                      View Project
-                    </Link>
+    <section className={styles.projectsSection}>
+      <h2 className={styles.sectionTitle}>My Projects</h2>
+      <div className={styles.projectsContainer}>
+        {projects.map((project) => (
+          <div key={project.id} className={styles.projectCard}>
+            <div className={styles.imageContainer}>
+              <img
+                src={project.imgUrl}
+                alt={project.title}
+                className={styles.projectImage}
+              />
+              <div className={styles.overlay}>
+                <Link href={project.gitUrl}>
+                  <div className={styles.iconBox}>
+                    <span className={styles.icon}>Git</span>
                   </div>
-                </div>
+                </Link>
+                <Link href={project.previewUrl}>
+                  <div className={styles.iconBox}>
+                    <span className={styles.icon}>Preview</span>
+                  </div>
+                </Link>
               </div>
-            ))}
+            </div>
+            <h3 className={styles.projectTitle}>{project.title}</h3>
           </div>
-        </div>
-      </section>
-    </div>
+        ))}
+      </div>
+    </section>
   );
-}
+};
+
+export default ProjectSection;
