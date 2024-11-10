@@ -3,20 +3,7 @@ Portfolio Website
 Overview
 This is a personal portfolio website built using Next.js and Tailwind CSS to showcase your projects, skills, and professional experience. The website features a clean, modern design with smooth navigation and responsive layout, optimized for a professional online presence.
 
-Features
-Dynamic Routing: Each section of the portfolio is organized into different pages.
-Responsive Design: The website is mobile-friendly and works on all screen sizes.
-Smooth Navigation: A responsive Navbar that allows visitors to easily navigate between sections.
-Projects Showcase: Displays your projects with descriptions, links, and technologies used.
-CV Integration: A downloadable CV option embedded in the website.
-Contact Information: Easily accessible contact details for visitors.
-Technologies Used
-Next.js: For server-side rendering and building the portfolio with dynamic routing.
-Tailwind CSS: For responsive design and rapid UI development.
-JavaScript/TypeScript: For adding interactivity.
-Vercel: For easy deployment and hosting.
-Folder Structure
-scss
+
 Copy code
 src/
 │
